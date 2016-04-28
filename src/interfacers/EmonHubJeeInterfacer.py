@@ -185,7 +185,7 @@ class EmonHubJeeInterfacer(ehi.EmonHubSerialInterfacer):
             elif key == 'calibration' and setting == '110V':
                 command = '2p'
 	    elif key == 'calibration':
-		command = value + 'p'
+		command = setting + 'p'
                 
             else:
                 self._log.warning("In interfacer set '%s' is not a valid setting for %s: %s" % (str(setting), self.name, key))
